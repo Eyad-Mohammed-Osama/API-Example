@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	style="table {border-collapse: collapse;border-spacing: 0;width: 100%;border: 1px solid #ddd;}th, td {text-align: left;padding: 16px;}tr:nth-child(even) {background-color: #f2f2f2}"
+
+	h1(style="text-align:center;")= "Welcome to employees fetch API"
+	h3(style="text-align:center;")= "Here's a table of first " + NumberOfEmployees + " employees whose firstnames starts with A:"
+	
+	table
+		tr
+			th="Employee ID"
+			th="Employee name"
+			th="Employee birthdate"
+		- let temp = EmployeesTable;
+		- for (let i = 0; i < temp.length; i++)
+			tr
+				th= temp[i].emp_no
+				th= `${temp[i].first_name + " " + temp[i].last_name}`
+				th= temp[i].birth_date
