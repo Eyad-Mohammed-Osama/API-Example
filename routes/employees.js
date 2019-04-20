@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 const employees = require("../models/employees");
 
+// Here, we're doing nothing but encapsulating the APIs inside routers methods
+// So users can access the APIs through the provided routers
+
 router.get("/", (req, res, next) => {
   	employees.GetAllEmployees(-1, (err, result) => {
 		res.setHeader("Content-Type", "application/json");
