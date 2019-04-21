@@ -25,7 +25,7 @@ Then `cd` to `API-Example`.
 
 Next step is to run `npm install` in order to install all the dependencies.
 
-Now you need to import the database into your MySQL server, the file `company.sql` is a minified version of the employees database created by [https://launchpad.net/test-db"](LaunchPad).
+Now you need to import the database into your MySQL server, the file `company.sql` is a minified version of the employees database created by [https://launchpad.net/test-db](LaunchPad).
 
 You can just copy the code inside `company.sql` to the SQL tab inside your phpMyAdmin client, or you can import the whole file at once:
   - Click the **import** button:
