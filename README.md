@@ -25,14 +25,14 @@ Then `cd` to `API-Example`.
 
 Next step is to run `npm install` in order to install all the dependencies.
 
-Now you need to import the database into your MySQL server, the file `company.sql` is a minified version of the employees database created by <a href="https://launchpad.net/test-db" target="_blank">LaunchPad</a> [Warning: Link open in new tab].
+Now you need to import the database into your MySQL server, the file `company.sql` is a minified version of the employees database created by [https://launchpad.net/test-db"](LaunchPad).
 
 You can just copy the code inside `company.sql` to the SQL tab inside your phpMyAdmin client, or you can import the whole file at once:
-  - Click the <b>import</b> button:
+  - Click the **import** button:
   
   <img src="documentation-images/doc.png">
   
-  - Now click the <b>Browse...</b> button, choose `company.sql` file (from the project folder), then click the `Go` button:
+  - Now click the **Browse...** button, choose `company.sql` file (from the project folder), then click the `Go` button:
   
   <img src="documentation-images/doc-1.png">
   
@@ -57,21 +57,21 @@ From there you can change login credentials (if it's necessary), and the provide
 ## More configurations
 Further configurations can be done inside `bin/www` and `app.js`.
 
-(<b>Warning</b> unless you know what you're doing, don't screw `www` file neither `app.js` file, otherwise your application might not be able to start, you've been warned).
+(**Warning** unless you know what you're doing, don't screw `www` file neither `app.js` file, otherwise your application might not be able to start, you've been warned).
 
 # Running this whole thing
 Inside project folder, just run `npm start` from your terminal, something like this should appear:
 
 <img src="documentation-images/doc-4.png">
 
-Now open <a href="http://localhost:8000/">http://localhost:8000/</a>, the following screen will show:
+Now open [http://localhost:8000/](http://localhost:8000/), the following screen will show:
 
 <img src="documentation-images/doc-5.png">
 
 And that's it, everything has been confirmed to be working.
 
 # Usage
-  - The link <a href="http://localhost:8000/employees">http://localhost:8000/employees</a> returns a JSON response that contains the info of all employees in `employees` table.
-  - The link <a href="http://localhost:8000/employees/firstname/SOMETHING">http://localhost:8000/employees/firstname/SOMETHING</a> returns a JSON response that contains the info of all employees whose firstnames starts with `SOMETHING`.
-  - The link <a href="http://localhost:8000/employees/limit/NUMBER">http://localhost:8000/employees/limit/NUMBER</a> returns a JSON response that contains the info of the first `NUMBER` employees.
-  - The link <a href="http://localhost:8000/employees/firstname/SOMETHING/limit/NUMBER">http://localhost:8000/employees/firstname/SOMETHING/limit/NUMBER</a> returns a JSON response that contains the info of the first `NUMBER` employees whose firstnames starts with `SOMETHING`.
+  - The link [http://localhost:8000/employees](http://localhost:8000/employees) returns a JSON response that contains the info of all employees in `employees` table.
+  - The link [http://localhost:8000/employees/firstname/SOMETHING](http://localhost:8000/employees/firstname/SOMETHING) returns a JSON response that contains the info of all employees whose firstnames starts with `SOMETHING`.
+  - The link [http://localhost:8000/employees/limit/NUMBER](http://localhost:8000/employees/limit/NUMBER) returns a JSON response that contains the info of the first `NUMBER` employees.
+  - The link [http://localhost:8000/employees/firstname/SOMETHING/limit/NUMBER](http://localhost:8000/employees/firstname/SOMETHING/limit/NUMBER) returns a JSON response that contains the info of the first `NUMBER` employees whose firstnames starts with `SOMETHING`.
