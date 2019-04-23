@@ -5,7 +5,6 @@ A repository that contains a small example to demonstrate what is an API
 One of my friends asked me to explain what is an API, so i searched around and found that the best way to do this is to build a small application where user request info about employees through URL GET parameters.
 
 # Dependencies
-- axios >= 0.18.0
 - body-parser >= 1.18.3
 - cookie-parser >= 1.4.3
 - debug >= 2.6.9
@@ -67,6 +66,10 @@ Inside project folder, just run `npm start` from your terminal, something like t
 Now open [http://localhost:8000/](http://localhost:8000/), the following screen will show:
 
 <img src="documentation-images/doc-5.png">
+
+As you start typing a firstname, suggestions will appear in a nice formatted table:
+
+<img src="documentation-images/doc-6.png">
 
 And that's it, everything has been confirmed to be working.
 
