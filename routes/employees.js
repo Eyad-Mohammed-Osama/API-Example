@@ -79,6 +79,13 @@ router.post("/", [
 		check("firstname").isAlpha()
 		.withMessage("Firstname must only contain alphabetic characters")
 	], (req, res, next) => {
+		if (req.session.queries && req.body.firstname !== "") {
+			req.session.queries.push(req.body.firstname);
+		}
+		else if (!req.session.queries) {
+			req.session.queries = [];
+		}
+		
 		res.setHeader("Content-Type", "application/json");
 		const errors = validationResult(req);
 		if (!errors.isEmpty()) {
