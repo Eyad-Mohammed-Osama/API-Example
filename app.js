@@ -8,6 +8,7 @@ const session = require("express-session");
 const indexRouter = require("./routes/index");
 const employeesRouter = require("./routes/employees");
 const historyRouter = require("./routes/history");
+const referenceRouter = require("./routes/reference");
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use(session({ secret : "This is a secret" }));
 app.use("/", indexRouter);
 app.use("/employees", employeesRouter);
 app.use("/history", historyRouter);
+app.use("/reference", referenceRouter);
 app.use("*", (req, res, next) => {
 	res.status(404).send("<h1>Error 404: Page not found</h1>");
 });

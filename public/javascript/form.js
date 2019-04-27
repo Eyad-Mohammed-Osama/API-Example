@@ -1,4 +1,3 @@
-
 $(document).ready(() => {
     $("#firstname").on("input", () => {
         $.ajax({
@@ -14,13 +13,17 @@ $(document).ready(() => {
                 }
                 let table = ``;
                 table += `<p class="text-center">${result.length} employees has been fetched</p>`;
-                table += `<table>`;
+                table += `<div class="table-responsive">`;
+                table += `<table class="table table-striped">`;
+                table += `<thead class="thead-light">`;
                 table += `<tr>`;
                 table += `<th>Employee ID</th>`;
                 table += `<th>Employee Name</th>`;
                 table += `<th>Employee Birthdate</th>`;
                 table += `</tr>`;
+                table += `</thead>`;
 
+                table += `<tbody>`;
                 for (let i = 0; i < result.length; i++) {
                     table += `<tr>`;
                     table += `<td>${result[i].emp_no}</td>`;
@@ -28,6 +31,9 @@ $(document).ready(() => {
                     table += `<td>${result[i].birth_date}</td>`;
                     table += `</tr>`;
                 }
+                table += `</tbody>`;
+                table += `</table>`;
+                table += `</div>`;
                 $("#result").html(table);
             }
         })
