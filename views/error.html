@@ -1,3 +1,7 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
+<h1 class="text-center"><%= error.name %></h1>
+<br/>
+<p>Error overview:</p>
+<pre><%= error.message %></pre>
+<br/>
+<p>Stack trace:</p>
 <pre><%= error.stack %></pre>
