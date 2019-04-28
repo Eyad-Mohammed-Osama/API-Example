@@ -2,11 +2,12 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res, next) => {
-    res.set({
-        "Cache-Control" : "no-cache",
-        "Content-Type" : "application/json"
-    });
-    res.send(req.session.queries);
+    console.log(req.session.queries)
+    res.render('layout', {
+		title : "Search history",
+        view : "search-history",
+        records : req.session.queries 
+	});
 });
 
 module.exports = router;

@@ -1,0 +1,25 @@
+<h1 class="text-center">Your search history</h1>
+
+
+<% if (records === undefined) { %>
+    <p class="text-center">No search operations yet.</p>
+<% } else { %>
+    <div class="table-responsive">
+        <table class="table table-striped text-center mx-auto w-75">
+            <thead class="thead-light">
+                <tr>
+                    <th>Query</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <% records.forEach((record) => { %>
+                    <tr>
+                        <td><%= record.firstname %></td>
+                        <td><%= record.date %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+<% } %>
