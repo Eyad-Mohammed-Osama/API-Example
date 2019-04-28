@@ -51,7 +51,7 @@ We're still not ready yet, some configurations are required.
 
 # Configuration
 ## Database connection credentials
-In project folder, there's a folder called `models`, inside it there's a file called `db.js`.
+In project folder, there's a folder called `models`, inside it there's a file called `db-credentials.js`.
 
 This file basically contains an instance of MySQL connection.
 
@@ -71,7 +71,9 @@ Now open [http://localhost:8000/](http://localhost:8000/), the following screen 
 
 <img src="documentation-images/doc-5.png">
 
-As you start typing a firstname, suggestions will appear in a nice formatted table:
+Type a firstname (or a part of it) and press the **Search** button.
+
+Results should appear in a nicely designed and user friendly table like this:
 
 <img src="documentation-images/doc-6.png">
 
@@ -82,3 +84,4 @@ And that's it, everything has been confirmed to be working.
   - The link [http://localhost:8000/employees/firstname/SOMETHING](http://localhost:8000/employees/firstname/SOMETHING) returns a JSON response that contains the info of all employees whose firstnames starts with `SOMETHING`.
   - The link [http://localhost:8000/employees/limit/NUMBER](http://localhost:8000/employees/limit/NUMBER) returns a JSON response that contains the info of the first `NUMBER` employees.
   - The link [http://localhost:8000/employees/firstname/SOMETHING/limit/NUMBER](http://localhost:8000/employees/firstname/SOMETHING/limit/NUMBER) returns a JSON response that contains the info of the first `NUMBER` employees whose firstnames starts with `SOMETHING`.
+  - The link [http://localhost:8000/search-history](http://localhost:8000/search-history) view a list of what you've recently searched for alongside with operation datetime.
