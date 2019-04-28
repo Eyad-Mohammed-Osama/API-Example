@@ -6,10 +6,12 @@ One of my friends asked me to explain what is an API, so i searched around and f
 
 # Dependencies
 - body-parser >= 1.18.3
-- cookie-parser >= 1.4.3
+- cookie-parser >= 1.4.3 
 - debug >= 2.6.9
 - ejs >= 2.6.1
 - express >= 4.16.0
+- express-mysql-session >= 2.1.0
+- express-session >= 1.16.1
 - http-errors >= 1.6.2
 - morgan >= 1.9.0
 - mysql >= 2.17.1
