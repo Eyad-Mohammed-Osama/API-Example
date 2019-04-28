@@ -1,10 +1,11 @@
 $(document).ready(() => {
-    $("#firstname").on("input", () => {
+    $("form[action='/employees']").on("submit", (e) => {
+        e.preventDefault();
         $.ajax({
             type : "POST",
             url : "/employees",
             data : {
-                "firstname" : $("#firstname").val()
+                "firstname" : $("input[name='firstname']").val()
             },
             success : (result) => {
                 if (result["errors"] !== undefined) {
