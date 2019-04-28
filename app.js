@@ -22,7 +22,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-app.use(session({ secret : "This is a secret" }));
+app.use(session({ 
+	secret : "This is a secret",
+	resave : false,
+	saveUninitialized : false
+}));
 
 app.use("/", indexRouter);
 app.use("/employees", employeesRouter);
