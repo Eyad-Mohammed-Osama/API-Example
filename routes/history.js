@@ -3,13 +3,19 @@ const History = require("../models/history");
 const router = express.Router();
 
 router.get("/", (req, res, next) => {
-	let queries = null;
 	History.GetQueries((err, result) => {
-		var queries = JSON.parse(result[0].data).queries;
+		let response;
+		if (result.length === 0) {
+			response = undefined;
+		}
+		else {
+			response = JSON.parse(result[0].data).queries;
+		}
+		
 		res.render('layout', {
 			title : "Search history",
 			view : "search-history",
-			records : queries 
+			records : response
 		});
 	});
 });
