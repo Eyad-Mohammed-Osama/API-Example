@@ -23,7 +23,6 @@ const sessionStore = new MySQLStore({
 	database : credentials.database,
 	clearExpired : true,
 	checkExpirationInterval : 3600000,	// Each hour, let's check whether there are expired sessions to remove
-	expiration : 1440000,	// Each session is valid for 24 minutes
 	charset : "utf8_bin"
 });
 
@@ -42,7 +41,10 @@ app.use(session({
 	secret : "This is a secret",
 	store : sessionStore,
 	resave : false,
-	saveUninitialized : false
+	saveUninitialized : false,
+	cookie : {
+		maxAge : 1440000	// Each session is valid for 24 minutes
+	}
 }));
 
 app.use("/", indexRouter);
